@@ -92,6 +92,14 @@ module.exports = {
             background: "linear-gradient(326deg, #5f0a87 0%, #db5151 74%)",
           },
         },
+        increaseHeight: {
+          from: {
+            height: 0,
+          },
+          to: {
+            height: 192,
+          },
+        },
         zoomIn: {
           from: {
             width: "200px",
@@ -110,9 +118,18 @@ module.exports = {
             transform: "scale(1.0)",
           },
         },
+        enLarge: {
+          from: {
+            transform: "scale(0.0)",
+          },
+          to: {
+            transform: "scale(1.0)",
+          },
+        },
       },
 
       animation: {
+        increaseHeight: "increaseHeight 0.2s ease 0s 1 normal forwards running",
         fadeIn: "fadeIn 0.2s ease 0s 1 normal forwards running",
         fadeOut: "fadeOut 0.2s ease 0s 1 normal forwards running",
         rotate: "rotate 100s linear infinite",
@@ -121,7 +138,8 @@ module.exports = {
         bgChange: "bgChange  2s linear 0s infinite normal forwards running",
         slideDownVanish: "slideDownVanish 0.2s linear forwards ",
         zoomIn: "zoomIn 0.2s linear forwards ",
-        zoomOut: "zoomOut 0.2s linear forwards ",
+        enLarge: "enLarge 0.3s linear forwards running ",
+        zoomOut: "zoomOut 0.2s linear forwards running",
       },
 
       content: {

@@ -1,10 +1,49 @@
+import { images } from "./../assets/images/images";
+export const commentsdummyData = [
+  {
+    email: "assanics@gmail.com",
+    commentText:
+      "This has the highest rank and he is so cool. I can't believe it. What a guy",
+    createdAt: "2 days ago",
+  },
+  {
+    email: "Nathaniel Assan",
+    commentText:
+      "This has the highest rank and he is so cool. I can't believe it. What a guy",
+    createdAt: "2 days ago",
+  },
+  {
+    email: "Nathaniel Assan",
+    commentText:
+      "This has the highest rank and he is so cool. I can't believe it. What a guy",
+    createdAt: "2 days ago",
+  },
+  {
+    email: "Nathaniel Assan",
+    commentText:
+      "This has the highest rank and he is so cool. I can't believe it. What a guy",
+    createdAt: "2 days ago",
+  },
+  {
+    email: "Nathaniel Assan",
+    commentText:
+      "This has the highest rank and he is so cool. I can't believe it. What a guy",
+    createdAt: "2 days ago",
+  },
+  {
+    email: "Nathaniel Assan",
+    commentText:
+      "This has the highest rank and he is so cool. I can't believe it. What a guy",
+    createdAt: "2 days ago",
+  },
+];
 export const usersDummyData = [
   {
     id: "58e278e6cbbac46d9f000080",
     username: "string",
     name: "Nathaniel Assan Ewudzi",
     honor: 190,
-    clan: "",
+    clan: "uchiha",
     leaderboardPosition: 305168,
     skills: [],
     ranks: {
@@ -33,7 +72,7 @@ export const usersDummyData = [
     username: "string",
     name: "Emmaanuel Mortey",
     honor: 190,
-    clan: "",
+    clan: "uzumaki",
     leaderboardPosition: 305168,
     skills: [],
     ranks: {
@@ -62,7 +101,7 @@ export const usersDummyData = [
     username: "string",
     name: "Kelvin Mills",
     honor: 190,
-    clan: "",
+    clan: "zionite",
     leaderboardPosition: 305168,
     skills: [],
     ranks: {
@@ -91,7 +130,7 @@ export const usersDummyData = [
     username: "string",
     name: "Paul Partey",
     honor: 190,
-    clan: "",
+    clan: "heavenite",
     leaderboardPosition: 305168,
     skills: [],
     ranks: {
@@ -120,7 +159,7 @@ export const usersDummyData = [
     username: "string",
     name: "Aikins C++",
     honor: 190,
-    clan: "",
+    clan: "extint",
     leaderboardPosition: 305168,
     skills: [],
     ranks: {
@@ -149,7 +188,7 @@ export const usersDummyData = [
     username: "string",
     name: "Bernard Amoah",
     honor: 190,
-    clan: "",
+    clan: "beast",
     leaderboardPosition: 305168,
     skills: [],
     ranks: {
@@ -178,7 +217,7 @@ export const usersDummyData = [
     username: "string",
     name: "Desmond Assan",
     honor: 190,
-    clan: "",
+    clan: "greeny",
     leaderboardPosition: 305168,
     skills: [],
     ranks: {
@@ -207,7 +246,7 @@ export const usersDummyData = [
     username: "string",
     name: "Mike Attara",
     honor: 190,
-    clan: "",
+    clan: "diamond",
     leaderboardPosition: 305168,
     skills: [],
     ranks: {
@@ -236,7 +275,7 @@ export const usersDummyData = [
     username: "string",
     name: "Vincent Aflao",
     honor: 190,
-    clan: "turn",
+    clan: "turnite",
     leaderboardPosition: 305168,
     skills: [],
     ranks: {
@@ -265,7 +304,7 @@ export const usersDummyData = [
     username: "string",
     name: "Tarek Quo",
     honor: 190,
-    clan: "advantageP",
+    clan: "advantage",
     leaderboardPosition: 305168,
     skills: [],
     ranks: {
@@ -377,3 +416,34 @@ export const usersDummyData = [
     },
   },
 ];
+export const languages = [
+  "javascript",
+  "c++",
+  "csharp",
+  "typescript",
+  "python",
+  "sql",
+];
+
+export const getLanguageIcon = (language) => {
+  switch (language) {
+    case "javascript":
+      return images.javaScript;
+    case "c++":
+      return images.cPlusPlus;
+    case "typescript":
+      return images.typeScript;
+    case "java":
+      return images.java;
+    case "python":
+      return images.python;
+    case "sql":
+      return images.kotlin;
+    case "sql-server":
+      return images.sqlServe;
+    case "csharp":
+      return images.cSharp;
+    default:
+      break;
+  }
+};

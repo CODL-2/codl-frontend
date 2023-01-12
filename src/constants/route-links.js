@@ -24,9 +24,9 @@ export const ROUTES = {
   },
 
   //===============  PROTECTED ROUTES ===============
-  dashboard: {
-    route: "/dashboard",
-    url: "/dashboard",
+  accounts: {
+    route: "/accounts",
+    url: "/accounts",
   },
   leaderboard: {
     route: "/leaderboard",

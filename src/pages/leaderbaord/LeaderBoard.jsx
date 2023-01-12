@@ -46,7 +46,7 @@ export default function LeaderBoard() {
   const getLanguagesObject = () => {
     const langObj = [
       {
-        name: "All",
+        name: "Overall",
         icon: <IntegrationInstructions className="text-gray-500" />,
       },
     ];
@@ -61,10 +61,11 @@ export default function LeaderBoard() {
     return langObj;
   };
   return (
-    <div className="w-full h-full flex px-[20px] flex-col pb-[20px]">
+    <div className="w-full h-full flex px-[50px] flex-col pb-[20px]">
       <div className="w-full h-[50px] flex justify-start items-center mb-[20px]">
         <span className="text-3xl  text-blue-900">Leader Board</span>
       </div>
+
       {/* Table Control section */}
       <div className="w-full h-[60px] flex items-center justify-between ">
         <div className="flex items-center ">
@@ -94,27 +95,33 @@ export default function LeaderBoard() {
               Rank
             </div>
           </div>
-          <div className="h-full flex items-center">
-            <ComboInput
-              placeholder="Select Language"
-              label=""
-              name="language"
-              data={getLanguagesObject()}
-              displayProperty={"name"}
-              noBorder
-              className="bg-[#F5F7F9] border-0 max-w-full w-full"
-            />
+          <div className="h-[60px] flex z-[3]">
+            {boardType === "rank" && (
+              <div className="h-full flex items-center animate-rise mt-[10px]">
+                <ComboInput
+                  placeholder="Select Language"
+                  label=""
+                  name="language"
+                  data={getLanguagesObject()}
+                  displayProperty={"name"}
+                  value={"Overall"}
+                  noBorder
+                  className="bg-[#F5F7F9] border-0 max-w-full w-full "
+                />
+              </div>
+            )}
           </div>
         </div>
 
         <div className="flex justify-center items-center">
-          <span clasName="mr-2">1 - 50 of 373</span>
-          <span clasName="ml-2">
+          <span className="mr-2">1 - 50 of 373</span>
+          <span className="ml-2">
             <ChevronLeft className="cursor-pointer" />
             <ChevronRight className="cursor-pointer" />
           </span>
         </div>
       </div>
+
       {/* Table Entry Point */}
       <div className="w-full h-full bg-[#F8FAFF] overflow-auto px-3">
         <div className="w-full h-full">

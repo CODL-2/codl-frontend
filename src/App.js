@@ -20,9 +20,10 @@ function App() {
       <ToastContainer />
       <Routes>
         {/*====== Non Protected routes ====== */}
-        <Route path={ROUTES.login.route} element={<Auth />} />
-        <Route path={ROUTES.register.route} element={<Auth />} />
-        <Route path={ROUTES.auth.route} element={<Auth />} />
+        <Route path={ROUTES.base.route} element={<Login />} />
+        <Route path={ROUTES.login.route} element={<Login />} />
+        <Route path={ROUTES.register.route} element={<Register />} />
+        {/* <Route path={ROUTES.auth.route} element={<Auth />} /> */}
 
         {/*====== Protected routes ======  */}
         <Route element={<ProtectedRoutes />}>
